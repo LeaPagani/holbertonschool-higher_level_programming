@@ -7,3 +7,4 @@ def uppercase(str):
         else:
             strtmp += c
     print("{}".format(strtmp))
+    
