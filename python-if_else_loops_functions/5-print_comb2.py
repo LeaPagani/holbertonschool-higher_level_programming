@@ -6,4 +6,4 @@ for i in range(0, 100):
     else:
         if i == 99:
             newend = "\n"
-        print("{}{}".format(0, i), end=newend)
+        print("{}".format(i), end=newend)
