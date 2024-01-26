@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 newend = ", "
 for i in range(0, 100):
-    if i < 10:
+    ldigit = i % 10
+    fdigit = i / 10
+    if i < 10 and fdigit < ldigit:
         print("{}{}".format(0, i), end=newend)
-    else:
-        if i == 99:
+    elif fdigit < ldigit:
+        if i == 89:
             newend = "\n"
-        print("{}".format(i), end=newend)
+        print(i, end=newend)
