@@ -14,6 +14,5 @@ def roman_to_int(roman_string):
             elif roman_values[roman_string[iteration]] == prev_value:
                 result += roman_values[roman_string[iteration]]
             else:
-                result -= roman_values[roman_string[iteration]]
-            
+                result -= roman_values[roman_string[iteration]]   
     return result
