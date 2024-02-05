@@ -1,5 +1,7 @@
 #!/usr/bin/python3
+"""Add int function"""
 def add_integer(a, b=98):
+    """Function that returns the sum of two integers"""
 
     if type(a) not in [int, float]:
         raise TypeError('a must be an integer')
