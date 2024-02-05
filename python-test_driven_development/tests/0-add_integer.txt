@@ -1,121 +1,59 @@
-The ``add_integer`` module
-==========================
-
-Using ``add_integer``
+Using repr(add_integer)
 ---------------------
 
-First import ``add_integer`` from the ``add_integer`` module:
+First import repr(add_integer) from the repr(add_integer) module:
 
-	>>> add_integer = __import__('0-add_integer').add_integer
+    >>> add_integer = __import__('0-add_integer').add_integer
 
-Now use it:
+Usage:
+    >>> add_integer(1, 2)
+    3
 
-	>>> add_integer(1, 2)
-	3
+Negative integer:
+    >>> add_integer(100, -10)
+    90
 
-	>>> add_integer(2)
-	100
+One input:
+    >>> add_integer(4)
+    102
 
-	>>> add_integer(1, -2)
-	-1
+Float and negative integer:
+    >>> add_integer(100.3, -10)
+    90
 
-	>>> add_integer(-2)
-	96
+>>> add_integer(0, float('nan'))
+    Traceback (most recent call last):
+    	      ...
+    ValueError: cannot convert float NaN to integer
 
-	>>> add_integer(-1, -2)
-	-3
+Float overflow:
+    >>> add_integer(1000.5)
+    1098
 
-	>>> add_integer(1, 2.5)
-	3
+String b:
+    >>> add_integer(4, "School")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
 
-	>>> add_integer(2.5)
-	100
+String a:
+    >>> add_integer("School", 4)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
 
-	>>> add_integer(1, -2.5)
-	-1
+None input:
+    >>> add_integer(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
 
-	>>> add_integer(-2.5)
-	96
+Double negative float input:
+    >>> add_integer(-10.3, -10.2)
+    -20
 
-	>>> add_integer(-1, -2.5)
-	-3
-
-	>>> add_integer(1.5, 2.5)
-	3
-
-	>>> add_integer(2.5)
-	100
-
-	>>> add_integer(1.5, -2.5)
-	-1
-
-	>>> add_integer(-2.5)
-	96
-
-	>>> add_integer(-1.5, -2.5)
-	-3
-
-	>>> add_integer(float('inf'))
-	Traceback (most recent call last):
-	...
-	TypeError: a must be an integer
-
-	>>> add_integer(-float('inf'), 1)
-	Traceback (most recent call last):
-	...
-	TypeError: a must be an integer
-
-	>>> add_integer(-float('inf'), -float('inf'))
-	Traceback (most recent call last):
-	...
-	TypeError: a must be an integer
-
-	>>> add_integer(1, -float('inf'))
-	Traceback (most recent call last):
-	...
-	TypeError: b must be an integer
-
-	>>> add_integer(-float('inf'))
-	Traceback (most recent call last):
-	...
-	TypeError: a must be an integer
-	
-	>>> add_integer("Holberton", 1)
-	Traceback (most recent call last):
-	...
-	TypeError: a must be an integer
-
-	>>> add_integer("Holberton", "School")
-	Traceback (most recent call last):
-	...
-	TypeError: a must be an integer
-
-	>>> add_integer(1, "School")
-	Traceback (most recent call last):
-	...
-	TypeError: b must be an integer
-
-	>>> add_integer("Holberton")
-	Traceback (most recent call last):
-	...
-	TypeError: a must be an integer
-
-	>>> add_integer(None, 1)
-	Traceback (most recent call last):
-	...
-	TypeError: a must be an integer
-
-	>>> add_integer(None, None)
-	Traceback (most recent call last):
-	...
-	TypeError: a must be an integer
-
-	>>> add_integer(1, None)
-	Traceback (most recent call last):
-	...
-	TypeError: b must be an integer
-
-	>>> add_integer(None)
-	Traceback (most recent call last):
-	...
-	TypeError: a must be an integer
+Double string input:
+    >>> add_integer("holberton", "school")
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
