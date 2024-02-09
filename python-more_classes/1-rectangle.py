@@ -1,9 +1,14 @@
 #!/usr/bin/python3
-"""Docstring for file"""
+"""Rectangle module.
+This module contains a class that defines a rectangle.
+"""
 
 
 class Rectangle __init__(self, width=0, heigth=0):
-    """Docstring for rectangle class"""
+    """Sets the necessary attributes for the Rectangle object.
+        Args:
+            width (int): the width of the rectangle.
+            height (int): the height of the rectangle."""
     self.width = width
     self.heigth = heigth
 
@@ -14,7 +19,6 @@ def width(self):
 
 @width.setter
 def width (self, value):
-    """Docstring for Rectangle width setter"""
     if type(value) is int:
         if value > 0:
             self._width = value
@@ -30,7 +34,6 @@ def heigth(self):
 
 @heigth.setter
 def heigth (self, value):
-    """Docstring for Rectangle heigth setter"""
     if type(value) is int:
         if value > 0:
             self._heigth = value
