@@ -14,7 +14,9 @@ def __init__(self, width=0, heigth=0):
             height (int): the height of the rectangle.
     """
     self.width = width
-    self.heigth = heigth
+    self.height = height:
+
+
 
 @property
 def width(self):
@@ -32,16 +34,16 @@ def width (self, value):
         raise TypeError (width must be an integer)
 
 @property 
-def heigth(self):
-    """Docstring for Rectangle heigth"""
-    return self._heigth
+def height(self):
+    """Docstring for Rectangle height"""
+    return self._height
 
-@heigth.setter
-def heigth (self, value):
+@height.setter
+def height (self, value):
     if type(value) is int:
         if value > 0:
-            self._heigth = value
+            self._height = value
         else:
-            raise ValueError (heigth must be >= 0)
+            raise ValueError (height must be >= 0)
     else:
-        raise TypeError (heigth must be an integer)
+        raise TypeError (height must be an integer)
