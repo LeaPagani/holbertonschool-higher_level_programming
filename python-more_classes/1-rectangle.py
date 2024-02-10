@@ -7,7 +7,7 @@ This module contains a class that defines a rectangle.
 class Rectangle ():
     """Defines a rectangle."""
 
-    def __init__(self, width=0, heigth=0):
+    def __init__(self, width=0, height=0):
         """Sets the necessary attributes for the Rectangle object.
         Args:
             width (int): the width of the rectangle.
