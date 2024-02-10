@@ -31,7 +31,7 @@ class Rectangle ():
         else:
             raise TypeError("width must be an integer")
 
-    @property 
+    @property
     def height(self):
         """Docstring for Rectangle height"""
         return self.__height
