@@ -19,13 +19,13 @@ class Rectangle ():
     @property
     def width(self):
         """Docstring for Rectangle width"""
-        return self._width
+        return self.__width
 
     @width.setter
     def width (self, value):
         if type(value) is int:
             if value > 0:
-                self._width = value
+                self.__width = value
             else:
                 raise ValueError ("width must be >= 0")
         else:
@@ -34,13 +34,13 @@ class Rectangle ():
     @property 
     def height(self):
         """Docstring for Rectangle height"""
-        return self._height
+        return self.__height
 
     @height.setter
     def height (self, value):
         if type(value) is int:
             if value > 0:
-                self._height = value
+                self.__height = value
             else:
                 raise ValueError ("height must be >= 0")
         else:
