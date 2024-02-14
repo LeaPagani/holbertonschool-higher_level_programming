@@ -6,9 +6,9 @@ class Base():
     """ Private class Atribute """
 
     def __init__(self, id=None):
-        """ Class constructor 
+        """ Class constructor
         Args: id(int) """
-        
+
         if id is not None:
             self.id = id
         else:
