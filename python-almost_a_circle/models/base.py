@@ -1,7 +1,14 @@
 #!/usr/bin/python3
 class Base():
+    """ Base class """
+
     __nb_objects = 0
+    """ Private class Atribute """
+
     def __init__(self, id=None):
+        """ Class constructor 
+        Args: id(int) """
+        
         if id is not None:
             self.id = id
         else:
