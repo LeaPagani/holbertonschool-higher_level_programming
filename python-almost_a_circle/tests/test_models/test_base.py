@@ -6,6 +6,8 @@
 import os
 import unittest
 from models.base import Base
+from models.square import Square
+from models.rectangle import Rectangle
 
 
 # Class #0
