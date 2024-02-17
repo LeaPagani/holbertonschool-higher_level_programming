@@ -87,7 +87,8 @@ class Rectangle(Base):
         return self.width * self.height
 
     def display(self):
-        """Prints in stdout the Rectangle instance with the character #."""
-        print('\n' * self.y, end='')
-        for height in range(self.height):
-            print(' ' * self.x + '#' * self.width)
+        """Prints the Rectangle instance with '#' characters."""
+        for _ in range(self.__y):  # Print empty lines for vertical padding
+            print()
+        for _ in range(self.__height):  # Print each row of the rectangle
+            print(" " * self.__x + "#" * self.__width)
