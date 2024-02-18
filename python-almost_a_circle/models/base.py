@@ -73,7 +73,7 @@ class Base():
     @classmethod
     def load_from_file(cls):
         """Returns a list of instances loaded from a JSON file."""
-        file_name = cls.__name__ + ".json"  # Construct the file name based on class name
+        file_name = cls.__name__ + ".json"  # Make file name based on cls name
         instances = []
 
         try:
