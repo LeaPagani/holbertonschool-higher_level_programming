@@ -4,8 +4,8 @@ import json
 
 
 class Base():
-    """ This class will be the “base” of all other classes in this project. 
-    The goal of it is to manage id attribute in all your future classes and 
+    """ This class will be the “base” of all other classes in this project.
+    The goal of it is to manage id attribute in all your future classes and
     to avoid duplicating the same code (by extension, same bugs) """
 
     __nb_objects = 0
@@ -13,8 +13,8 @@ class Base():
 
     def __init__(self, id=None):
         """ Class constructor
-        Args: 
-        id(int) 
+        Args:
+        id(int)
         """
         if id is not None:
             self.id = id
@@ -28,4 +28,4 @@ class Base():
         if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
         else:
-            return json.dumps(list_dictionaries)    
+            return json.dumps(list_dictionaries)
