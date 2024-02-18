@@ -52,7 +52,7 @@ class Base():
         if json_string is None or json_string == "":
             return []
         return json.loads(json_string)
-    
+
     @classmethod
     def create(cls, **dictionary):
         """Returns an instance with all attributes already set.
@@ -67,5 +67,5 @@ class Base():
         else:
             raise ValueError("Invalid class name")
 
-        dummy_instance.update(**dictionary)  # Updte dummy instnce w provided dictionary
+        dummy_instance.update(**dictionary)  # Update dummy with dictionary
         return dummy_instance
