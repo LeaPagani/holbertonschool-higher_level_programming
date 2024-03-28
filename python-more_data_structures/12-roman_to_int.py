@@ -5,7 +5,6 @@ def roman_to_int(roman_string):
     }
     result = 0
     prev_value = 0
-    prev_biggestvalue = 0
     if type(roman_string) is str and roman_string:
         for iteration in range(len(roman_string) - 1, -1, -1):
             if roman_values[roman_string[iteration]] > prev_value:
